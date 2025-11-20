@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - [Cardinal Bookstore]</title>
+    <title>Contact Us</title>
     <style>
-        /* Simple inline CSS for basic readability and centering */
+        /* Basic CSS for presentation - you would typically put this in a separate style.css file */
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
             color: #333;
-            text-align: center;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
-            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
         }
         h1 {
-            color: #007bff;
             text-align: center;
+            color: #0056b3;
+        }
+        .contact-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
         }
         label {
             display: block;
@@ -37,10 +38,10 @@
         textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Important for padding/border not to increase overall width */
+            box-sizing: border-box; /* Ensures padding doesn't affect the width */
         }
         textarea {
             resize: vertical;
@@ -53,46 +54,72 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            width: 100%;
         }
         button:hover {
             background-color: #0056b3;
         }
-        .info-section {
+        .map-container {
             text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Get In Touch</h1>
-        <p>We'd love to hear from you! Please fill out the form below or use one of the contact methods listed.</p>
 
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <div class="contact-section">
+        <h2>Send Us a Message</h2>
         <form action="#" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="user_email" required>
-
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="message_subject">
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="user_message" rows="6" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="info-section">
-            <h2>Other Ways to Contact Us</h2>
-            <p><strong>Email:</strong> <a href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a></p>
-            <p><strong>Phone:</strong> (555) 123-4567</p>
-            <p><strong>Address:</strong> 123 Web Dev Lane, Internet City, CA 90210</p>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
             </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="message_subject">
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="user_message" rows="6" required></textarea>
+            </div>
+            <button type="submit">Submit Message</button>
+        </form>
     </div>
+    
+    <hr>
+
+    <div class="contact-section">
+        <h2>Our Details</h2>
+        <p>Feel free to reach out to us using the details below:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a> (Replace with your email)</li>
+            <li><strong>Phone:</strong> (555) 123-4567 (Replace with your phone number)</li>
+            <li><strong>Address:</strong> 123 Web Street, GitHub City, CA 90210 (Replace with your address)</li>
+        </ul>
+    </div>
+    
+    <hr>
+
+    <div class="contact-section map-container">
+        <h2>Find Us</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.221541810486!2d144.9630579153163!3d-37.81627997975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b991b1f637%3A0x5045675218d8e50!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4f13.1" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location on Map">
+        </iframe>
+    </div>
+
+</div>
+
 </body>
 </html>
